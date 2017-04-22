@@ -35,7 +35,7 @@ public class Home extends AppCompatActivity implements GoogleApiClient.Connectio
 
         Intent intent = new Intent( this, ActivityRecognizerService.class );
         PendingIntent pendingIntent = PendingIntent.getService( this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT );
-        ActivityRecognition.ActivityRecognitionApi.requestActivityUpdates( mApiClient, 1800000, pendingIntent );
+        ActivityRecognition.ActivityRecognitionApi.requestActivityUpdates( mApiClient, 3600000, pendingIntent );
     }
 
     @Override
